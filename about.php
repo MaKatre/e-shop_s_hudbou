@@ -273,6 +273,7 @@
     <?php
         include "parts/footer.php"
     ?>
+    
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>

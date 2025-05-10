@@ -1,9 +1,9 @@
 <?php
-    $title = 'POKUS';
+    /*$title = 'POKUS';
     $metaTags = 'tag1 tag2';
     $currentPage = 'index';
     require_once(__DIR__.'/header.php');
-    require_once(__DIR__.'parts')
+    require_once(__DIR__.'parts')*/
 ?>
 
 <?php
