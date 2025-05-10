@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include "parts/header.php"
+    include "parts/header_contact.php";
 ?>
 
 <body>
@@ -26,7 +26,6 @@
         </div>
     </nav>
     <!-- Close Top Nav -->
-     
 
 
     <!-- Header -->
@@ -169,9 +168,9 @@
         </div>
     </div>
     <!-- End Contact -->
-    
+
     <?php
-        include "parts/footer.php"
+        include "parts/footer_contact.php";
     ?>
 
     <!-- Start Script -->
