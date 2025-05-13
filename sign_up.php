@@ -105,6 +105,23 @@
 
     <h1>Sign Up</h1>
     <p>Already have an account? Click <a href = "sign_in.php">HERE</a></p>
+
+    <form>
+        <label>User Name</label>
+        <br>
+        <input type="text">
+        <br>
+        <label>Email</label>
+        <br>
+        <input type= "text">
+        <br>
+        <label>Password</label>
+        <br>
+        <input type="email">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
 </body>
 
 <?php

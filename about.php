@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include "parts/header.php"
+    include "parts/header.php";
 ?>
 
 <body>
@@ -271,7 +271,7 @@
     <!--End Brands-->
 
     <?php
-        include "parts/footer.php"
+        include "parts/footer.php";
     ?>
     
 
