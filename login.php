@@ -1,6 +1,5 @@
 <?php
     include "parts/header.php";
-
 ?>
 
 <body>
@@ -99,7 +98,6 @@
             </form>
         </div>
     </div>
-
 
     <h1>Sign In</h1>
     <p>Don't have an account? Click <a href = "sign_up.php">HERE</a></p>
