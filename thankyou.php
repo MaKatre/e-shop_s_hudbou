@@ -4,6 +4,7 @@
 
 <body>
     <h1>Thank You</h1>
+    <p>Thank you for ...</p>
 </body>
 
 <?php

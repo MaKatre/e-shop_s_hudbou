@@ -22,6 +22,7 @@ $(document).ready(function() {
       return false;
     });
     // End accordion
+    //there's an accordion?
 
     // Product detail
     $('.product-links-wap a').click(function(){
