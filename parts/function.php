@@ -5,19 +5,19 @@
             if($type ===  "header"){
                 $menu = [
                     'home' = [
-                        'name' => 'Domov',
+                        'name' => 'home',
                         'path' => 'index.php',
                     ],
                     'contact' = [
-                        'name' => 'kontakt',
+                        'name' => 'contact',
                         'path' => 'contact.php',
                     ],
                     'about' = [
-                        'name' => '',
+                        'name' => 'about',
                         'path' => 'about.php',
                     ]
                     'shop' = [
-                        'name' => '',
+                        'name' => 'shop',
                         'path' => 'shop.php',
                     ]
 
