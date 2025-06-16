@@ -104,7 +104,7 @@
 
 
     <h1>Sign Up</h1>
-    <p>Already have an account? Click <a href = "sign_in.php">HERE</a></p>
+    <p>Already have an account? Click <a href = "login.php">HERE</a></p>
 
     <form>
         <label>User Name</label>
@@ -113,11 +113,11 @@
         <br>
         <label>Email</label>
         <br>
-        <input type= "text">
+        <input type= "email">
         <br>
         <label>Password</label>
         <br>
-        <input type="email">
+        <input type="text">
         <br>
         <input type="submit" value="Submit">
     </form>

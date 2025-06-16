@@ -106,13 +106,9 @@
         <br>
         <input type="text">
         <br>
-        <label>Email</label>
-        <br>
-        <input type= "text">
-        <br>
         <label>Password</label>
         <br>
-        <input type="email">
+        <input type="text">
         <br>
         <input type="submit" value="Submit">
     </form>
