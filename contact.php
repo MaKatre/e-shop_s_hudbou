@@ -3,6 +3,30 @@
 
 <?php
     include "parts/header_contact.php";
+
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+
+    require_once('_inc/classes/Database.php');
+    require_once('_inc/classes/Contact.php');
+    
+    $db = new Database();
+    $contact = new Contact($db);
+
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+        print_r($_POST);
+        if($contact->create($name,$email,$subject,$message)){
+            header("Location: thankyou.php");
+            exit;
+        }else{
+            echo "Error creating contact";
+        }
+    }
+
 ?>
 
 <body>

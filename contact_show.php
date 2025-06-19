@@ -23,18 +23,17 @@ if(isset($_GET['idform']) && !empty($_GET['idform'])){
     echo "<a href='admin.php'>Back to contacts</a>";
     exit;
 }
-
 ?>
 
 <section class="container">
-<h1>Contact show</h1>
-<p>Name: <?php echo($contactData['name']);?></p>
-<p>Email: <?php echo($contactData['email']);?></p>
-<p>Subject: <?php echo($contactData['subject']);?></p>
-<p>Message: <?php echo($contactData['message']);?></p>
-<a href="admin.php">Back to Contacts</a>
+    <h1>Contact show</h1>
+    <p>Name: <?php echo htmlspecialchars($contactData['name']); ?></p>
+    <p>Email: <?php echo htmlspecialchars($contactData['email']); ?></p>
+    <p>Subject: <?php echo htmlspecialchars($contactData['subject']); ?></p>
+    <p>Message: <?php echo nl2br(htmlspecialchars($contactData['message'])); ?></p>
+    <a href="admin.php">Back to Contacts</a>
 </section>
 
 <?php
-    include('parts/footer_contact.php');
+include('parts/footer_contact.php');
 ?>
