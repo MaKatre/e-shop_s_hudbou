@@ -140,7 +140,7 @@
     <!-- Start Contact -->
     <div class="container py-5">
         <div class="row py-5">
-            <form class="col-md-9 m-auto" method="post" role="form">
+            <form class="col-md-9 m-auto" id="contact" method="post" role="form">
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputname">Name</label>
@@ -172,14 +172,3 @@
     <?php
         include "parts/footer_contact.php";
     ?>
-
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
-</body>
-
-</html>
