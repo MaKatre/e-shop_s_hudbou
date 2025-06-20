@@ -12,6 +12,7 @@ class Authenticate{
         $stmt->bindParam(':email',$email,PDO::PARAM_STR);
         $stmt->execute();
         $user = $stmt->fetch();
+
         if($user){
             if(password_verify($password, $user['password'])){
                 $_SESSION['iduser'] = $user['iduser'];
@@ -20,17 +21,17 @@ class Authenticate{
                 $_SESSION['role'] = $user['role'];
                 return true;
             }else{
-                echo "Wrong password or email";
+                return false;
             }
         }else{
-            echo "User not found<br>";
+            return false;
         }
-        return false;
     }
 
     public function sign_out(){
         $_SESSION = array();
-        if(ini_get("this session is using cookies")){
+
+        if(ini_get("session.use.of_cookies")){
             $paramy = session_get_cookie_params();
             setcookie(
                 session_name(),
@@ -46,7 +47,7 @@ class Authenticate{
     }
 
     public function isSignedIn(){
-        return isset($_SESSION['role'] ?? null);
+        return isset($_SESSION['role']);
     }
 
     public function requireSignIn(){

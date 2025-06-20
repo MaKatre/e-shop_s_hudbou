@@ -3,8 +3,8 @@
     class User{
         private $db;
 
-        public function __construct(){
-            $this->db=$database->getConnection();
+        public function __construct(Database $database){
+            $this->db = $database->getConnection();
         }
 
         public function index(){
@@ -15,7 +15,7 @@
 
         public function create($name,$email,$password){
             $stmt=$this->dn->prepare("SELECT iduser FROM user WHERE email=:email");
-            $stmt=bindParam(':email',$email,PDO::PARAM_STR);
+            $stmt->bindParam(':email',$email,PDO::PARAM_STR);
             $stmt->execute();
 
             if($stmt->fetch(PDO::FETCH_ASSOC)){
@@ -51,7 +51,7 @@
             $stmt->bindParam(':idemail',$email,PDO::PARAM_STR);
             $stmt->bindParam(':role',$role,PDO::PARAM_INT);
 
-            return false;
+            return $stmt->execute();
         }
 
         public function destroy($id){
@@ -62,6 +62,7 @@
 
         public function show($id){
             $stmt=$this->db->prepare("SELECT * FROM user");
+            $stmt->bindParam(':iduser', $id, PDO::PARAM_INT);
             $stmt->execute();
             return  $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
