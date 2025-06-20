@@ -1,9 +1,6 @@
 <?php
 class Menu {
 
-    /*error_reporting(E_ALL);
-    ini_set('display_errors', 1);*/
-
     private $menu_items;
     
     public function __construct($menu_items = []) {
@@ -13,17 +10,16 @@ class Menu {
                 ['label' => 'About', 'link' => 'about.php'],
                 ['label' => 'Shop', 'link' => 'shop.php'],
                 ['label' => 'Contact', 'link' => 'contact.php']
-            ]; // Fixed: Added missing semicolon
+            ];
         }
         $this->menu_items = $menu_items;
     }
-    
-    // Fixed: Return the menu items properly
+
     public function getMenuItems() {
         return $this->menu_items;
     }
     
-    // New method: Generate HTML for the menu
+    //Metóda na generovanie html pre menu (Môžete poďakovať contact.php)
     public function generateMenu($current_page = '') {
         $html = '';
         foreach($this->menu_items as $item) {
@@ -43,7 +39,7 @@ class Menu {
         return $html;
     }
     
-    // Alternative method: Generate menu with custom CSS classes
+    //alternatívna metóda na vytvorenie custome css
     public function generateCustomMenu($css_classes = 'nav-link', $current_page = '') {
         $html = '';
         foreach($this->menu_items as $item) {

@@ -3,7 +3,7 @@
 
 <?php
     include "parts/header_contact.php";
-    include 'parts/mavigation.php';
+    include 'parts/navigation.php';
 
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
