@@ -1,6 +1,7 @@
 <?php
     include "parts/header.php";
     include 'parts/navigation.php';
+    require_once('_inc/class/Authenticate.php');
 ?>
 
     <h1>Sign In</h1>

@@ -7,6 +7,7 @@
     $current_page = basename($_SERVER['PHP_SELF']);
 
 ?>
+
 <body>
 <!-- Start Top Nav -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
