@@ -1,88 +1,74 @@
 <?php
-session_start(); // Add session_start at the beginning
 
-include "parts/header.php";
-include 'parts/navigation.php';
-
-ini_set('display_errors', 1);
 error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Fixed file paths - both files are in the classes folder
+session_start();
 require_once('_inc/classes/Database.php');
-require_once('_inc/classes/User.php');
-require_once('_inc/class/Authenticate.php');
+require_once('_inc/classes/Authenticate.php');
+
+$db = new Database();
+$auth = new Authenticate($db);
 
 $error = '';
 $success = '';
 
-try {
-    $db = new Database();
-    $user = new User($db);
-} catch (Exception $e) {
-    die("Error initializing classes: " . $e->getMessage());
+// Check if user is already signed in
+if ($auth->isSignedIn()) {
+    header("Location: index.php"); // Redirect to dashboard or home page
+    exit;
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
-    $role = $_POST['role'] ?? 0; // Default role
     
     // Basic validation
-    if (empty($name) || empty($email) || empty($password)) {
+    if (empty($email) || empty($password)) {
         $error = "All fields are required";
     } else {
-        // Try to create the user
-        if ($user->create($name, $email, $password, $role)) {
-            $success = "Account created successfully! You can now sign in.";
+        // Try to sign in the user
+        if ($auth->sign_in($email, $password)) {
+            header("Location: index.php");
+            exit;
         } else {
-            $error = "Registration failed. Email might already be in use.";
+            $error = "Invalid email or password.";
         }
     }
 }
+
+include "parts/header.php";
+include 'parts/navigation.php';
 ?>
 
-<h1>Sign Up</h1>
+<h1>Sign In</h1>
 
 <?php if(!empty($error)): ?>
-    <div style="color: red; margin-bottom: 10px;">
-        <?php echo htmlspecialchars($error); ?>
-    </div>
+<div style="color: red; margin-bottom: 10px;">
+    <?php echo htmlspecialchars($error); ?>
+</div>
 <?php endif; ?>
 
 <?php if(!empty($success)): ?>
-    <div style="color: green; margin-bottom: 10px;">
-        <?php echo htmlspecialchars($success); ?>
-        <br><a href="sign_in.php">Click here to sign in</a>
-    </div>
+<div style="color: green; margin-bottom: 10px;">
+    <?php echo htmlspecialchars($success); ?>
+</div>
 <?php endif; ?>
 
-<p>Already have an account? Click <a href="sign_in.php">HERE</a></p>
+<p>Don't have an account? <a href="sign_up.php">Click here to sign up</a></p>
 
-<form id="user" action="" method="POST">
-    <label>User Name</label>
-    <br>
-    <input type="text" name="name" required> <!-- Added name attribute -->
-    <br>
+<form method="POST">
     <label>Email</label>
     <br>
-    <input type="email" name="email" required> <!-- Added name attribute -->
-    <br>
-    <label>Password</label>
-    <br>
-    <input type="password" name="password" required> <!-- Changed to password type and added name attribute -->
-    <br>
-    
-    <!-- Optional: Add role selection -->
-    <label>Role</label>
-    <br>
-    <select name="role">
-        <option value="0">User</option>
-        <option value="1">Admin</option>
-    </select>
+    <input type="email" name="email" required>
     <br><br>
     
-    <input type="submit" value="Submit">
+    <label>Password</label>
+    <br>
+    <input type="password" name="password" required>
+    <br><br>
+    
+    <input type="submit" value="Sign In">
 </form>
 
 <?php
