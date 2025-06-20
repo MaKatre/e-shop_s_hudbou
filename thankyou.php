@@ -1,5 +1,6 @@
 <?php
     include "parts/header_contact.php";
+    include 'parts/navigation.php';
 ?>
 
 <body>

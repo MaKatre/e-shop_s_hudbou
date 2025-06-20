@@ -1,6 +1,23 @@
 <?php
     include "parts/header.php";
 
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+
+    require_once('_inc/classes/Database.php');
+    require_once('_inc/classes/User.php');
+
+    $db = new Database();
+    $user = new User($db);
+
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $role=$_POST['role'];
+        $password=$_POST['password'];
+    }
+
+
 ?>
 
 <body>
@@ -106,7 +123,7 @@
     <h1>Sign Up</h1>
     <p>Already have an account? Click <a href = "login.php">HERE</a></p>
 
-    <form>
+    <form id="user" action="" method="POST">
         <label>User Name</label>
         <br>
         <input type="text">

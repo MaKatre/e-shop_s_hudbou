@@ -1,10 +1,12 @@
 <?php
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once('_inc/classes/Database.php');
 require_once('_inc/classes/Contact.php');
 include('parts/header_contact.php');
+include 'parts/navigation.php';
 
 $db = new Database();
 $contact = new Contact($db);

@@ -1,3 +1,12 @@
+<?php
+    require_once '_inc/classes/Menu_function.php';
+
+    $menu = new Menu();
+    
+    // Get current page for active highlighting
+    $current_page = basename($_SERVER['PHP_SELF']);
+
+?>
 <body>
 <!-- Start Top Nav -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -26,7 +35,7 @@
         <div class="container d-flex justify-content-between align-items-center">
 
             <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
-                PLACE
+                Zay
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
