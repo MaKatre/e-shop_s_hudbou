@@ -15,12 +15,13 @@
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Gender
+                            Type
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Men</a></li>
-                            <li><a class="text-decoration-none" href="#">Women</a></li>
+                            <li><a class="text-decoration-none" href="#">Vinyl</a></li>
+                            <li><a class="text-decoration-none" href="#">CD</a></li>
+                            <li><a class="text-decoration-none" href="#">Cassette</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
@@ -29,11 +30,11 @@
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Sport</a></li>
-                            <li><a class="text-decoration-none" href="#">Luxury</a></li>
+                            <li><a class="text-decoration-none" href="#">Common</a></li>
+                            <li><a class="text-decoration-none" href="#"></a>Collector edition</li>
                         </ul>
                     </li>
-                    <li class="pb-3">
+                    <!--<li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Product
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
@@ -43,7 +44,7 @@
                             <li><a class="text-decoration-none" href="#">Sweather</a></li>
                             <li><a class="text-decoration-none" href="#">Sunglass</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
 
@@ -55,10 +56,13 @@
                                 <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Vinyl</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+                                <a class="h3 text-dark text-decoration-none" href="#">CD</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none" href="#">Cassette</a>
                             </li>
                         </ul>
                     </div>
@@ -80,12 +84,12 @@
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i class="far fa-eye"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="card-body">
+                            <!--<div class="card-body">
                                 <a href="shop-single.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
@@ -405,7 +409,7 @@
                                 <p class="text-center mb-0">$250.00</p>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
