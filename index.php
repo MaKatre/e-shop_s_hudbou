@@ -2,10 +2,6 @@
 <html lang="en">
 
 <?php
-    //report erroru/errorov
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
     include 'parts/header.php';
     include 'parts/navigation.php';
 ?>
