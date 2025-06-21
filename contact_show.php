@@ -18,24 +18,10 @@ if(!$allContacts || empty($allContacts)){
     echo "<a href='admin.php'>Back to admin</a>";
     exit;
 }
-
-/*if(isset($_GET['idform']) && !empty($_GET['idform'])){
-    $id = $_GET['idform'];
-    $contactData = $contact->show($id);
-    
-    if(!$contactData){
-        echo "<p>Contact not found</p>";
-        echo "<a href='admin.php'>Back to contacts</a>";
-        exit;
-    }
-} else {
-    echo "<p>No contact ID provided</p>";
-    echo "<a href='admin.php'>Back to contacts</a>";
-    exit;
-}*/
 ?>
 
 <section class="container">
+<?php if($userRole == 1): ?>
     <h1>All Contacts</h1>
     
     <?php foreach($allContacts as $contactData): ?>
@@ -48,6 +34,9 @@ if(!$allContacts || empty($allContacts)){
             
         </div>
     <?php endforeach; ?>
+    <?php else: ?>
+        <p>You don't have premission to view this page.</p>
+    <?php endif;?>
     
     <a href="admin.php">Back to main page</a>
 </section>

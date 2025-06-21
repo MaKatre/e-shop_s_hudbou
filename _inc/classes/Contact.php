@@ -28,13 +28,5 @@ class Contact{
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
-    /*public function getAll() {
-        $query = "SELECT * FROM form ORDER BY idform DESC";
-        $stmt = $this->db->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }*/
-
 }
 ?>
