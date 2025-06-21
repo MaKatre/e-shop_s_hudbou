@@ -33,7 +33,7 @@ if(isset($_GET['idform']) && !empty($_GET['idform'])){
     <p>Email: <?php echo htmlspecialchars($contactData['email']); ?></p>
     <p>Subject: <?php echo htmlspecialchars($contactData['subject']); ?></p>
     <p>Message: <?php echo nl2br(htmlspecialchars($contactData['message'])); ?></p>
-    <a href="admin.php">Back to Contacts</a>
+    <a href="admin.php">Back to main page</a>
 </section>
 
 <?php

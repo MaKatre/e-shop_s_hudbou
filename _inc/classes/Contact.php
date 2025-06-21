@@ -1,4 +1,5 @@
 <?php
+
 class Contact{
     private $db;
 

@@ -54,7 +54,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <?php if(!empty($success)): ?>
 <div style="color: green; margin-bottom: 10px;">
     <?php echo htmlspecialchars($success); ?>
-    <br><a href="sign_in.php">Click here to sign in</a>
 </div>
 <?php endif; ?>
 

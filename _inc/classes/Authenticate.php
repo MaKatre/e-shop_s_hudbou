@@ -47,6 +47,13 @@ class Authenticate{
         session_destroy();
     }
     
+    public function getUserRole(){
+        if($this->isSignedIn()){
+            return $_SESSION['role'];
+        }
+        return null;
+    }
+    
     public function isSignedIn(){
         return isset($_SESSION['role']);
     }

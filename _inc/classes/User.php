@@ -29,7 +29,7 @@ class User{
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':role', $role, PDO::PARAM_INT);
-        $s22tmt->bindParam(':password', $hashPasswd, PDO::PARAM_STR); // Use hashed password
+        $stmt->bindParam(':password', $hashPasswd, PDO::PARAM_STR); // Use hashed password
         
         return $stmt->execute();
     }

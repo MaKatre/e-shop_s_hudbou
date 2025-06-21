@@ -1,4 +1,5 @@
 <?php
+
 class Menu {
 
     private $menu_items;
@@ -25,7 +26,6 @@ class Menu {
         foreach($this->menu_items as $item) {
             $active_class = '';
             
-            // Add active class if this is the current page
             if($current_page && $current_page === $item['link']) {
                 $active_class = ' active';
             }
