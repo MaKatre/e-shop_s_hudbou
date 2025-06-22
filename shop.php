@@ -299,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!--<div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/tolstoys.jpeg">
@@ -410,7 +410,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
